@@ -1,0 +1,866 @@
+
+@media only screen and (max-width: 480px) {
+
+.navbar-expand-lg .navbar-brand {
+ width: 60%; 
+}
+
+.navbar-b.navbar-trans .nav-item {
+text-align:inherit !important;    
+}
+
+.navbar-b.navbar-reduce .nav-item {
+    text-align:inherit !important;       
+}
+
+.slider .parallax-slider .caption h1 {
+font-size: 24px;    
+}
+
+
+.slider .control-text .swiper-nav-ctrl:after {
+font-size: 15px;
+width: 40px;
+height: 40px;
+line-height: 40px;   
+}
+
+.button {
+padding: 5px 20px;   
+}
+
+
+.slider .parallax-slider .swiper-slide {
+min-height: 70vh;
+}
+
+.slider .parallax-slider .caption h1 {
+font-size:24px !important;    
+}
+
+.slider .control-text .swiper-nav-ctrl {
+display:none;    
+}
+
+
+
+.about-content h2 {
+font-size: 17px !important;    
+}
+
+
+.scopeImg {
+display:block !important;    
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.whereSection {
+    padding: 50px 0;
+}
+
+.geographicalSection {
+padding: 40px 0;   
+}
+
+.spaturMap {
+height:350px;    
+}
+
+.paddTop {
+padding-top: 0px;
+}
+
+
+.howSection {
+padding: 80px 0;
+margin-top: 50px;
+}
+
+.choose-images {
+margin-top: 30px;
+height: 350px;    
+}
+
+.referencesImg {
+height: 280px;   
+}
+
+.choose-content-info h2 {
+    font-size: 20px !important;
+}
+
+.section-title h2 {
+font-size: 20px !important;    
+}
+
+.section-title {
+margin-bottom: 10px;
+}
+
+form#contact-form {
+    margin-bottom: 60px !important;
+}
+
+.scopeSection .p-0 {
+    padding-right: 15px !important;
+    padding-left: 15px !important;   
+}
+
+
+.whyUsSection {
+padding-top: 50px;
+}
+
+.whyconant {
+padding-top: 30px;
+}
+
+.whyUsSection .p-0 {
+padding-right: 15px !important; 
+padding-left: 15px !important;   
+}
+
+
+}
+
+
+
+
+@media only screen and (min-width:481px) and (max-width: 568px) {
+
+.navbar-expand-lg .navbar-brand {
+width: 60%; 
+}
+
+.navbar-b.navbar-trans .nav-item {
+text-align:inherit !important;    
+}
+
+.navbar-b.navbar-reduce .nav-item {
+    text-align:inherit !important;       
+}
+
+.slider .parallax-slider .caption h1 {
+font-size: 24px;    
+}
+
+
+.slider .control-text .swiper-nav-ctrl:after {
+font-size: 15px;
+width: 40px;
+height: 40px;
+line-height: 40px;   
+}
+
+.button {
+padding: 5px 20px;   
+}
+
+
+.slider .parallax-slider .caption h1 {
+font-size:24px !important;    
+}
+
+.slider .control-text .swiper-nav-ctrl {
+display:none;    
+}
+
+
+
+.about-content h2 {
+font-size: 17px !important;    
+}
+
+
+.scopeImg {
+display:block !important;    
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.whereSection {
+    padding: 50px 0;
+}
+
+.geographicalSection {
+padding: 40px 0;   
+}
+
+.spaturMap {
+height:350px;    
+}
+
+.paddTop {
+padding-top: 0px;
+}
+
+
+.howSection {
+padding: 80px 0;
+margin-top: 50px;
+}
+
+.choose-images {
+margin-top: 30px;
+height: 350px;    
+}
+
+.referencesImg {
+height: 280px;   
+}
+
+.choose-content-info h2 {
+    font-size: 20px !important;
+}
+
+.section-title h2 {
+font-size: 20px !important;    
+}
+
+.section-title {
+margin-bottom: 10px;
+}
+
+form#contact-form {
+    margin-bottom: 60px !important;
+}
+
+.scopeSection .p-0 {
+    padding-right: 15px !important;
+    padding-left: 15px !important;   
+}
+
+
+.whyUsSection {
+padding-top: 50px;
+}
+
+.whyconant {
+padding-top: 30px;
+}
+
+.whyUsSection .p-0 {
+padding-right: 15px !important; 
+padding-left: 15px !important;   
+}    
+
+}
+
+
+
+@media only screen and (min-width:569px) and (max-width:766px) {
+
+.navbar-expand-lg .navbar-brand {
+width: 60%; 
+}
+
+.navbar-b.navbar-trans .nav-item {
+text-align:inherit !important;    
+}
+
+.navbar-b.navbar-reduce .nav-item {
+text-align:inherit !important;       
+}
+
+.slider .parallax-slider .caption h1 {
+font-size: 24px;    
+}
+
+
+.slider .control-text .swiper-nav-ctrl:after {
+font-size: 15px;
+width: 40px;
+height: 40px;
+line-height: 40px;   
+}
+
+.button {
+padding: 5px 20px;   
+}
+
+
+.slider .parallax-slider .caption h1 {
+font-size:24px !important;    
+}
+
+.slider .control-text .swiper-nav-ctrl {
+display:none;    
+}
+
+
+
+.about-content h2 {
+font-size: 17px !important;    
+}
+
+
+.scopeImg {
+display:block !important;    
+}
+
+.section-padding {
+padding: 50px 0;
+}
+
+.whereSection {
+padding: 50px 0;
+}
+
+.geographicalSection {
+padding: 40px 0;   
+}
+
+.spaturMap {
+height:350px;    
+}
+
+.paddTop {
+padding-top: 0px;
+}
+
+
+.howSection {
+padding: 80px 0;
+margin-top: 50px;
+}
+
+.choose-images {
+margin-top: 30px;
+height: 350px;    
+}
+
+.referencesImg {
+height: 280px;   
+}
+
+.choose-content-info h2 {
+font-size: 20px !important;
+}
+
+.section-title h2 {
+font-size: 20px !important;    
+}
+
+.section-title {
+margin-bottom: 10px;
+}
+
+form#contact-form {
+margin-bottom: 60px !important;
+}
+
+.scopeSection .p-0 {
+padding-right: 15px !important;
+padding-left: 15px !important;   
+}
+
+
+.whyUsSection {
+padding-top: 50px;
+}
+
+.whyconant {
+padding-top: 30px;
+}
+
+.whyUsSection .p-0 {
+padding-right: 15px !important; 
+padding-left: 15px !important;   
+}    
+
+
+}
+
+
+
+
+@media only screen and (min-width:767px) and (max-width:768px) {
+
+.navbar-expand-lg .navbar-brand {
+width: 60%; 
+}
+
+.navbar-b.navbar-trans .nav-item {
+text-align:inherit !important;    
+}
+
+.navbar-b.navbar-reduce .nav-item {
+text-align:inherit !important;       
+}
+
+.slider .parallax-slider .caption h1 {
+font-size: 24px;    
+}
+
+.slider .parallax-slider .swiper-slide {
+min-height: 50vh;    
+}
+
+
+.slider .control-text .swiper-nav-ctrl:after {
+font-size: 15px;
+width: 40px;
+height: 40px;
+line-height: 40px;   
+}
+
+.button {
+padding: 5px 20px;   
+}
+
+
+.slider .parallax-slider .caption h1 {
+font-size:24px !important;    
+}
+
+.slider .control-text .swiper-nav-ctrl {
+display:none;    
+}
+
+
+
+.about-content h2 {
+font-size: 17px !important;    
+}
+
+
+.scopeImg {
+display:block !important;    
+}
+
+.section-padding {
+padding: 50px 0;
+}
+
+.whereSection {
+padding: 50px 0;
+}
+
+.geographicalSection {
+padding: 40px 0;   
+}
+
+.spaturMap {
+height:350px;    
+}
+
+.paddTop {
+padding-top: 0px;
+}
+
+
+.howSection {
+padding: 80px 0;
+margin-top: 50px;
+}
+
+.choose-images {
+margin-top: 30px;
+height: 350px;    
+}
+
+.referencesImg {
+height: 280px;   
+}
+
+.choose-content-info h2 {
+font-size: 20px !important;
+}
+
+.section-title h2 {
+font-size: 20px !important;    
+}
+
+.section-title {
+margin-bottom: 10px;
+}
+
+form#contact-form {
+margin-bottom: 60px !important;
+}
+
+.scopeSection .p-0 {
+padding-right: 15px !important;
+padding-left: 15px !important;   
+}
+
+
+.whyUsSection {
+padding-top: 50px;
+}
+
+.whyconant {
+padding-top: 30px;
+}
+
+.whyUsSection .p-0 {
+padding-right: 15px !important; 
+padding-left: 15px !important;   
+} 
+
+
+.Industries.about-content-text {
+padding: 20px 0;
+} 
+
+
+}
+
+
+
+
+
+@media only screen and (min-width:769px) and (max-width:898px) {
+
+.navbar-expand-lg .navbar-brand {
+width: 60%; 
+}
+
+.navbar-b.navbar-trans .nav-item {
+text-align:inherit !important;    
+}
+
+.navbar-b.navbar-reduce .nav-item {
+text-align:inherit !important;       
+}
+
+.slider .parallax-slider .caption h1 {
+font-size: 24px;    
+}
+
+
+.slider .control-text .swiper-nav-ctrl:after {
+font-size: 15px;
+width: 40px;
+height: 40px;
+line-height: 40px;   
+}
+
+.button {
+padding: 5px 20px;   
+}
+
+
+.slider .parallax-slider .caption h1 {
+font-size:24px !important;    
+}
+
+.slider .control-text .swiper-nav-ctrl {
+display:none;    
+}
+
+
+
+.about-content h2 {
+font-size: 17px !important;    
+}
+
+
+.scopeImg {
+display:block !important;    
+}
+
+.section-padding {
+padding: 50px 0;
+}
+
+.whereSection {
+padding: 50px 0;
+}
+
+.geographicalSection {
+padding: 40px 0;   
+}
+
+.spaturMap {
+height:350px;    
+}
+
+.paddTop {
+padding-top: 0px;
+}
+
+
+.howSection {
+padding: 80px 0;
+margin-top: 50px;
+}
+
+.choose-images {
+margin-top: 30px;
+height: 350px;    
+}
+
+.referencesImg {
+height: 280px;   
+}
+
+.choose-content-info h2 {
+font-size: 20px !important;
+}
+
+.section-title h2 {
+font-size: 20px !important;    
+}
+
+.section-title {
+margin-bottom: 10px;
+}
+
+form#contact-form {
+margin-bottom: 60px !important;
+}
+
+.scopeSection .p-0 {
+padding-right: 15px !important;
+padding-left: 15px !important;   
+}
+
+
+.whyUsSection {
+padding-top: 50px;
+}
+
+.whyconant {
+padding-top: 30px;
+}
+
+.whyUsSection .p-0 {
+padding-right: 15px !important; 
+padding-left: 15px !important;   
+}   
+
+
+.Industries.about-content-text {
+    padding: 30px 0;
+}
+
+}
+
+
+
+
+
+@media only screen and (min-width:899px) and (max-width:993px) {
+
+.navbar-b.navbar-trans .nav-item {
+padding-right: 0px;   
+}
+
+.slider .parallax-slider .swiper-slide {
+min-height:70vh;   
+}
+
+.slider .parallax-slider .caption h1 {
+font-size:40px;    
+}
+
+
+.section-padding {
+padding: 50px 0;
+}
+
+.scopeImg {
+height:456px !important;    
+}
+
+}
+
+
+
+
+@media only screen and (min-width:994px) and (max-width:1025px) {
+
+.slider .parallax-slider .caption h1 {
+font-size: 40px;
+}
+
+.slider .control-text {
+display:none;    
+}
+
+.whyUsSection .p-0 {
+padding-right: 15px !important;
+padding-left: 15px !important;    
+}
+
+
+.scopeSection .p-0 {
+padding-right:15px !important;
+padding-left:15px !important;    
+}
+
+.scopeImg {
+height:556px;    
+}
+
+
+}
+
+
+
+
+
+@media only screen and (min-width:1026px) and (max-width:1199px) {
+
+.slider .parallax-slider .caption h1 {
+font-size:40px;    
+}
+
+.scopeImg {
+height:504px;    
+}
+
+}
+
+
+
+
+
+@media only screen and (min-width:1200px) and (max-width:1299px) { 
+
+
+}
+
+
+
+
+
+
+
+/********************************/
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+.navbar-b.navbar-trans .nav-link,
+.navbar-b.navbar-reduce .nav-link {
+	letter-spacing: 0px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+.about-image {
+    position: relative;
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 40px;
+}
+.partner-area.section-padding {
+    padding-bottom: 0;
+}
+.navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
+    text-align: center;
+    border-bottom: 1px solid #e1e4e5;
+}
+.navbar-b.navbar-trans .nav-item:hover a, .navbar-b.navbar-reduce .nav-item:hover a {
+    color: #e17538;
+}
+section#about {
+    padding-top: 50px;
+}
+.about-image img {
+    border-radius: 3px;
+    width: 100%;
+}
+.scopeSection {
+    background: linear-gradient(90deg, #333333 50%, #333 50%);
+}
+.scope.about-content {
+    padding: 20px;
+}
+.about-content h2{
+    line-height: 32px;
+    font-size: 26px;
+}
+.scopeImg{
+	display: none;
+}
+.whyconant .servlist li {
+    line-height: 22px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.single-services-item h3 {
+    font-size: 16px;
+}
+.choose-content-info h2 {
+    font-size: 28px;
+}
+.comments {
+    text-align: right;
+    margin-top: 10px;
+    line-height: 22px;
+    font-size: 12px;
+}
+.joeFerrara p {
+    font-size: 13px;
+    line-height: 22px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.globeImg img {
+    margin: 0 auto;
+    display: block;
+}
+.serviceTabs li.nav-item {
+    width: 100%;
+    margin-bottom: 24px;
+}
+.solutionImg img {
+    margin: 0 auto;
+    display: block;
+}
+.choose-images {
+    margin-bottom: 30px;
+}
+form#contact-form {
+    margin-bottom: 30px;
+}
+.slider .parallax-slider .caption h1 {
+    font-size: 38px;
+    line-height: 42px;
+}
+.globeImg img {
+    width: 78%;
+}
+nav#mainNav {
+    position: inherit;
+}
+.partner-item {
+    padding: 5px 0px;
+    margin: 5px 5px;
+}
+.Industries.about-content-text {
+    padding: 40px 0;
+}
+}
+
+@media only screen and (max-width: 576px) {
+.globeImg img {
+    width: 60%;
+}
+.resourcesImgContant {
+    padding: 0 30px;
+    position: absolute;
+    left: 0;
+    bottom: 26px;
+}
+.section-title h2 {
+    font-size: 24px;
+    line-height: 32px;
+}
+}
+
+@media only screen and (max-width: 479px) {
+	
+}
+
+@media screen and (max-width: 320px) and (min-width: 0px){
+		
+}

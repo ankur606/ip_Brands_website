@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/fonts-flaticon.ttf") format("truetype"),
+	url("../fonts/fonts-flaticon.woff") format("woff"),
+	url("../fonts/fonts-flaticon.woff2") format("woff2"),
+	url("../fonts/fonts-flaticon.eot") format("embedded-opentype"),
+	url("../fonts/fonts-flaticon.svg") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-automation:before {
+    content: "\f101";
+}
+.flaticon-laptop:before {
+    content: "\f102";
+}
+.flaticon-dashboard:before {
+    content: "\f103";
+}
+.flaticon-data:before {
+    content: "\f104";
+}
+.flaticon-video:before {
+    content: "\f105";
+}
+.flaticon-email:before {
+    content: "\f106";
+}
+.flaticon-report:before {
+    content: "\f107";
+}
+.flaticon-web:before {
+    content: "\f108";
+}
+.flaticon-idea:before {
+    content: "\f109";
+}
+.flaticon-seo:before {
+    content: "\f10a";
+}
+.flaticon-testing:before {
+    content: "\f10b";
+}
+.flaticon-spam-alert:before {
+    content: "\f10c";
+}
+.flaticon-content-management:before {
+    content: "\f10d";
+}
+.flaticon-domain:before {
+    content: "\f10e";
+}
+.flaticon-social-media:before {
+    content: "\f10f";
+}
+.flaticon-video-1:before {
+    content: "\f110";
+}
+.flaticon-ranking:before {
+    content: "\f111";
+}
+.flaticon-infographic:before {
+    content: "\f112";
+}
+.flaticon-bounce-rate:before {
+    content: "\f113";
+}
+.flaticon-profile:before {
+    content: "\f114";
+}
+.flaticon-data-1:before {
+    content: "\f115";
+}
+.flaticon-digital-marketing:before {
+    content: "\f116";
+}
+.flaticon-social-media-1:before {
+    content: "\f117";
+}
+.flaticon-optimization:before {
+    content: "\f118";
+}
+.flaticon-optimization-1:before {
+    content: "\f119";
+}
+.flaticon-email-1:before {
+    content: "\f11a";
+}
+.flaticon-browser:before {
+    content: "\f11b";
+}
+.flaticon-image:before {
+    content: "\f11c";
+}
+.flaticon-image-1:before {
+    content: "\f11d";
+}
+.flaticon-photo:before {
+    content: "\f11e";
+}
+.flaticon-team:before {
+    content: "\f11f";
+}
+.flaticon-teamwork:before {
+    content: "\f120";
+}
+.flaticon-24-hours:before {
+    content: "\f121";
+}
+.flaticon-employee:before {
+    content: "\f122";
+}
+.flaticon-medal:before {
+    content: "\f123";
+}
+.flaticon-contract:before {
+    content: "\f124";
+}
+.flaticon-loan:before {
+    content: "\f125";
+}
+.flaticon-marketing:before {
+    content: "\f126";
+}
+.flaticon-growth:before {
+    content: "\f127";
+}

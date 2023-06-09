@@ -1,0 +1,33 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %}  User profile {% endblock title %} </title>
+{% block content %}
+
+<section class="profile" >
+  <header class="header">
+    <div class="details">
+      {% for all in all %}
+      {% if all.user_id == request.user.id %}<img src="{{all.profile_image.url}}" alt="profile" class="profile-pic" />
+      {% elif all.user_id != request.user.id %}
+
+      {% endif %}
+      {% endfor %}
+  
+      <div style="background-color: rgb(14, 12, 12); height: 8cm; width: 12cm;" >
+        <img src="{{request.user.image.url}}" alt="">
+        <p class="heading">Name : {{request.user.name | capfirst}}</p>
+        <p class="heading"> <span>Email Id :</span> {{request.user | capfirst}}</p>
+        
+        <p class="heading">Phone Number : {{request.user.phone_number }}</p>
+      </div>
+      <br>
+      <div >
+      <a href="{% url 'editUser' request.user.id %}" class="btn btn-outline-success btn-sm">Edit Profile</a>
+
+      </div>
+    </div>
+  </header>
+</section>
+
+
+{% endblock content %}

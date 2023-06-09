@@ -1,0 +1,70 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Show banner details {% endblock title %} </title>
+{% block content %}
+<div class="col-lg-11 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title"></h4>
+      <h4 class="card-title">Add New Banner Details<a href="{% url 'addBanner' %}" class="btn btn-success btn-sm"
+          style="margin-left: 22px;">Add New Banner</a>
+        <div class="table-responsive">
+          {% for message in messages %}
+          <b style="color:#28c9ae">{{message}}</b>
+          {% endfor %} <br>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>
+                  Sr. No.
+                </th>
+                <th>
+                   Image
+                </th>
+                <th>
+                    Heading
+                </th>
+
+                <th>
+                    Description
+                </th>
+        
+                <th>
+                  Action
+                </th>
+
+              </tr>
+            </thead>
+            <tbody>
+              {% for data in data %}
+              <tr>
+                <td>
+                  {{forloop.counter}}
+
+                </td>
+
+                <td>
+                <img src="{{ data.image.url }}" alt="" style="height: 1in; width: 3cm;" >
+                </td>
+
+                <td>
+                  {{data.heading}}
+                </td>
+                <td>
+                  <textarea  cols="30" rows="10" disabled >{{data.description}}  </textarea>
+                </td>
+                <td>
+                  <a href="{% url 'Editbanner' data.id %}" class="btn btn-outline-success btn-sm">Edit</a>
+                  
+                  <a href="{% url 'bannerDelete' data.id %}" class="btn btn-outline-danger btn-sm"
+                    onclick="return confirm('Are You Sure')">Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

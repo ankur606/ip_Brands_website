@@ -1,0 +1,36 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Add Banner {% endblock title %} </title>
+{% block content %}
+
+
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Add New Banner</h4>
+      <form class="forms-sample" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for message in messages %}
+        <b style="color:#03e9f4">{{message}}</b>
+        {% endfor %} <br>
+        <div class="form-group">
+          <label for="banner_image">Banner Image</label>
+          <input type="file" class="form-control" required id="banner_image" name="banner_image">
+        </div>
+        <div class="form-group">
+          <label for="heading">Heading </label>
+          <input type="text" class="form-control" required id="heading" placeholder="Enter Banner Heading " name="heading">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea type="text" class="form-control" cols="40" rows="10" placeholder="write something here..." required id="description" name="description"></textarea>
+        </textarea>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary mr-2">Add Banner</button>
+          </div>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Add Project Overview  Page Content {% endblock title %} </title>
+{% block content %}
+
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Add New  Project Overview  Page Content: </h4>
+      <form class="forms-sample" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="image_first"> First Image:</label>
+          <input type="file" class="form-control"  id="image_first" name="image_first">
+        </div>
+
+        <div class="form-group">
+            <label for="description_first">First Description:</label>
+            <textarea type="text" class="form-control" cols="20" rows="4" placeholder="write something here..."  id="description_first" name="description_first"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image_second"> Second Image:</label>
+            <input type="file" class="form-control"  id="image_second" name="image_second">
+        </div>
+  
+        <div class="form-group">
+              <label for="description_second">Second Description:</label>
+              <textarea type="text" class="form-control" cols="20" rows="4" placeholder="write something here..."  id="description_second" name="description_second"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image_third"> Third Image:</label>
+            <input type="file" class="form-control"  id="image_third" name="image_third">
+        </div>
+  
+        <div class="form-group">
+              <label for="description_third">Third Description:</label>
+              <textarea type="text" class="form-control" cols="20" rows="4" placeholder="write something here..."  id="description_third" name="description_third"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image_fourth"> Fourth Image:</label>
+            <input type="file" class="form-control"  id="image_fourth" name="image_fourth">
+        </div>
+  
+        <div class="form-group">
+              <label for="description_fourth">Fourth Description:</label>
+              <textarea type="text" class="form-control" cols="20" rows="4" placeholder="write something here..."  id="description_fourth" name="description_fourth"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="year_durations">Years Durations:</label>
+            <input type="text" class="form-control" placeholder="Enter  durations years" required id="year_durations" name="year_durations">
+
+            
+      </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary mr-2">Add </button>
+        </div>
+
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

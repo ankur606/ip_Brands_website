@@ -1,0 +1,41 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Add where Page Content {% endblock title %} </title>
+{% block content %}
+
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Add New  Where Page Content: </h4>
+      <form class="forms-sample" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="banner_image"> IPBrands GmbH</label>
+          <input type="text" class="form-control"  id="title_name" value="{{data.IPBrandsGmbH}}" placeholder="write  title here..." name="title_name">
+        </div>
+ 
+        <div class="form-group">
+          <label for="description">Address:</label>
+          <textarea type="text" class="form-control" cols="20" rows="8"  placeholder="write address here..." required id="address" name="address">{{data.address}}</textarea>
+     
+        </div>  
+        <div class="form-group">
+            <label for="banner_image">Germany Office</label>
+            <input type="text" class="form-control" value="{{data.GermanyOffice_title}}" id="germany"  placeholder="write  germany Office title here..." name="germany">
+          </div>
+   
+        <div class="form-group">
+            <label for="description">Germany Office Address:</label>
+            <textarea type="text" class="form-control" cols="20" rows="4" placeholder="Write  Germany Office Address here..." required id="Germany_office_address" name="Germany_office_address">{{data.GermanyOfficeAddress}}</textarea>
+          
+          </div>  
+        <div class="row">
+            <button type="submit" class="btn btn-primary mr-2">Edit </button>
+          </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

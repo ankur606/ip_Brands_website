@@ -1,0 +1,27 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Edit   Usp Sub Heading {% endblock title %} </title>
+{% block content %}
+
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Edit Usp Us Sub Heading: </h4>
+      <hr>
+      <form class="forms-sample" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="banner_image"> Usp Sub Heading:</label>
+          <textarea type="text" class="form-control" rows="6" id="sub_heading" name="sub_heading">{{data.sub_heading_name}}</textarea>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary mr-2">Edit  </button>
+          </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock content %}

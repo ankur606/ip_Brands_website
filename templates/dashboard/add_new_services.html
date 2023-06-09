@@ -1,0 +1,40 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Add New Services {% endblock title %} </title>
+{% block content %}
+
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Add New  Services: </h4>
+      <form class="forms-sample" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="banner_image"> Image:</label>
+          <input type="file" class="form-control" required id="image" name="image">
+        </div>
+        <div class="form-group">
+          <label for="banner_image"> Service Name:</label>
+          <input type="text" class="form-control" required  placeholder="Write service name here..." id="service_name" name="service_name">
+        </div>
+        <div class="form-group">
+          <label for="description">Descriptions:</label>
+          <textarea type="text" class="form-control" cols="20" rows="8" placeholder="write something here..."  id="description" name="description"></textarea>
+        </textarea>
+      </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary mr-2">Add Service </button>
+          </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+<div>
+    <h5>Show Services Recoard Lists:</h5>  
+    <div>
+        <a href="{% url 'showService' %}">Show Lists</a>
+    </div>
+</div>
+{% endblock content %}

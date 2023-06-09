@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<title>Ipremiumbrands</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	 
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+	<!-- Site All Style Sheet Css -->
+	<link href="{% static 'css/css-bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-font-awesome.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-flaticon.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-themify-icons.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-magnific-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-animate.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-owl.carousel.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-owl.theme.default.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-jquery.mb.YTPlayer.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-swiper.min.css' %}" rel="stylesheet">
+	<!-- Site Main Style Sheet Css --> 
+	<link href="{% static 'css/css-style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/css-responsive.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	
+	<!-- Start Navbar Area -->
+	<nav class="navbar navbar-b navbar-trans fixed-top navbar-expand-lg" id="mainNav">
+		<div class="container-lg container-fluid-md">
+			<a class="navbar-brand js-scroll" href="/">
+				<img src="{% static 'images/img-logo.png' %}" class="white-logo" alt="logo">
+				<img src="{% static 'images/img-logo-black.png' %}" class="black-logo" alt="logo">
+			</a>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span> 
+			</button>
+			<div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link js-scroll active" href="#about">About</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll" href="#scope">Scope</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll" href="#where">Where</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll" href="#geographical">Geographical Reach</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll" href="#services">Services</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll" href="#references">References</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll" href="#contactform">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar Area -->
+	
+	<!-- Start Slider Are -->
+    <header id="home" class="slider slider-prlx"><!-- -->
+        <div class="swiper-container parallax-slider"><!--  -->
+            <div class="swiper-wrapper">
+				{% for banner_data in banner %}
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background=" {{banner_data.image.url}} " data-overlay-dark="5">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="caption">
+                                        <h1>{{banner_data.heading}}</h1>
+                                        <p>{{banner_data.description}}</p>
+										<div class="home-button-box home-slider-btn">
+											<a href="#0" class="button home-btn-1">Discover More</a>
+											<a href="#contactform" class="button home-btn-2">Contact Us</a>
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				{% endfor %}
+
+            </div>
+            <!-- slider setting -->
+            <div class="control-text">
+                <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                    <span class="arrow prv"></span>
+                </div>
+                <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                    <span class="arrow nxt"></span>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </header>
+    <!-- End Slider Area -->
+	
+	<!-- Start About Section -->
+	{% for about_data in about %}
+	<section id="about" class="about-area bg-gray section-padding">
+		<div class="container-lg container-fluid-md">
+			<div class="row d-flex align-items-center">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="about-content wow fadeInUp" data-wow-delay="0.2s">
+						<div class="about-content-text">
+							<h5 class="small-title">{{about_data.title_name}}</h5> 
+							<h2>
+								<!-- <span class="ipbColor">IPB</span> enhances and leverages brands’ <span class="spanColor"> international distribution footprint</span> and helps them navigate global complexity.</h2> -->
+								<span >{{about_data.heading}}</span></h2>
+							<ul class="aboutlist">
+								<li>{{about_data.description|linebreaks}}</li>
+							</ul>
+							<a class="button" href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="about-image wow fadeInDown" data-wow-delay="0.4s">
+						<img src="{{about_data.image.url}}" alt="About image">
+						<div class="years-design">
+							<h2>{{about_data.year_name}}</h2>
+							<h5>{{about_data.year_title}}</h5>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+	<!-- End About Section -->
+    {% for scope_data in scope %}
+	<section class="scopeSection" id="scope">
+		<div class="container-fluid p-0">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 p-0">
+					<div class="scopeImg">
+						<img src="{{scope_data.image.url}}">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+						<div class="scope about-content">
+							<div class="about-content-text wow fadeInUp" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
+								<h5 class="small-title">{{scope_data.page_title}}</h5> 
+								<h2>{{scope_data.heading}}</h2>
+
+								<div class="">
+									<p>{{scope_data.description|linebreaks}}</p>
+									
+								</div>
+									
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+	{% for where_data in where %}
+	<section class="whereSection" id="where">
+		<div class="container-lg container-fluid-md">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="about-content wow fadeInLeft" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+						<div class="about-content-text">
+							<h5 class="small-title">{{where_data.page_title}}</h5> 
+							<h2>{{where_data.heading}}</h2>
+
+							<div class="">
+				
+								<p>{{where_data.description|linebreaks}}</p>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="spaturMap wow fadeInRight" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
+						<img src="{{where_data.image.url}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+	{% for geographic_data in geographic %}
+	<section class="geographicalSection" id="geographical">
+		<div class="container-lg container-fluid-md">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="globeImg wow fadeInLeft" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+						<img src="{% static 'images/globeImg.png' %}">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="about-content wow fadeInRight" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+						<div class="about-content-text">
+							<h2>{{geographic_data.page_title}}</h2>
+
+							<div class="">
+								<p>{{geographic_data.description|linebreaks}}</p>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+	{% for industries_data in industries %}
+	<section class="wSection">
+		<div class="container-lg container-fluid-md">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="about-content wow fadeInLeft" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;">
+						<div class="Industries about-content-text">
+							<h2>{{industries_data.page_title}}</h2>
+
+							<div class="">
+								<ul class="pb-4">
+									<li> <strong>{{industries_data.heading}}</strong></li>
+									
+								</ul>
+								<p>{{industries_data.description|linebreaks}}</p>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="spaturMap paddTop wow fadeInRight" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+						<img src="{{industries_data.image.url}}">
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+	{% for how_data in how %}
+	<section class="howSection">
+		<div class="container-lg container-fluid-md">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 about-content">
+					<div class="howContant about-content-text wow fadeInUp" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
+						<h2>{{how_data.page_title}}</h2>
+                        <div class="howlist">							
+							<p>{{how_data.description|linebreaks}}</p>
+							
+							<h3>{{how_data.heading}}</h3>
+							<ul>
+								<li>{{how_data.sub_heading|linebreaks}}</li>
+							</ul>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+
+<!-- Start Services Section -->
+	<section id="services" class="services-section-2 section-padding pb-0">
+		<div class="container-lg container-fluid-md">
+            <div class="row">
+                <div class="col-sm-12">
+					<div class="section-title">
+						<h5 class="small-title">Technologies We Work With</h5>
+						<h2>Customised Service</h2>
+					</div>
+                </div>
+            </div>
+
+           <div class="row">
+	           	<div class="col-lg-12">
+	           		<ul class="nav nav-pills serviceTabs mb-3" id="pills-tab" role="tablist">
+						{% for service_data in service %}
+					  <li class="nav-item wow fadeInUp" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
+					    <a class="nav-link single-services-item h-100 {% if forloop.counter is 1 %} active {% endif %}" id="pills-home-tab{{service_data.id}}" data-toggle="pill" href="#pills-{{service_data.id}}" role="tab" aria-controls="pills-home" aria-selected="true">
+					    	<div class="services-icon">
+								<img src="{{service_data.image.url}}"  onclick="serviceID()" >
+							</div>
+							<h3>{{service_data.service_name}}</h3>
+					    </a>
+					  </li>
+					  {% endfor %}
+
+					</ul>
+					<div class="tab-content" id="pills-tabContent">
+						{% for data in service  %}
+						<div class="tab-pane fade {% if forloop.counter is 1 %} show active {% endif %}" id="pills-{{data.id}}" role="tabpanel" aria-labelledby="pills-home-tab{{data.id}}">
+							<div class="openServices">
+							
+							  <div class="row">
+								  <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;">
+									  <div class="services1">
+										  <img src="{{data.image.url}}">
+									  </div>
+								  </div>
+								  <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+									  <div class="serviceRightContant bgIcon1 about-content">	
+										  <h2>{{data.service_name}}</h2>
+										  <p>{{data.description|linebreaks}}</p>
+										  <ul class="servlist">
+											  {% for sub_heading in service_sub_headinhg %}
+											  <li><i class="fa fa-angle-double-right"></i> {{sub_heading.sub_heading_name}}</li>
+											  {% endfor %}
+											   
+										  </ul>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+						</div>
+						{% endfor %}					
+						
+					  </div>
+	           	</div>
+           </div>
+			
+		</div>
+	</section>
+	<!-- End Services Section -->
+	{% for whyus_data in WhyUs %}
+
+    <section class="whyUsSection">
+    	<div class="headingTitleBg">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-12">
+    					<div class="about-content">
+    						<h2>{{whyus_data.page_title}}</h2>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container-lg container-fluid-md">
+    		<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="whyconant wow fadeInLeft" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;">
+						<ul class="servlist">
+							{% for why_us_heading_data in why_us_heading %}
+							<li><i class="fa fa-angle-double-right"></i> {{why_us_heading_data.sub_heading_name}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="solutionImg wow fadeInRight" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+						<img src="{{whyus_data.image.url}}">
+					</div>
+				</div>
+			</div>
+    	</div>
+    </section>
+	{% endfor %}
+
+	<!-- Start Choose Section -->
+	
+	<section class="choose-area section-padding">
+		<div class="container-lg container-fluid-md">
+			<div class="row d-flex align-items-center">
+				<div class="col-lg-5 col-md-5 col-sm-12">
+					<div class="choose-images">
+						<img src="{% static 'images/upsImg.png' %}" alt="choose images">
+					</div>
+				</div>
+				<div class="col-lg-6 offset-lg-1 col-md-7 col-sm-12">
+					<div class="choose-content">
+						<div class="choose-content-info">
+							<h5 class="small-title">{{usp.page_title}}</h5> 
+							<h2>{{usp.heading}}</h2>
+						</div>
+						<div class="choose-feature-box">
+							<div class="choose-single-feature">
+								<div class="">
+									<p>{{usp.description}}</p>
+								</div>
+							</div>
+
+							<div class="whyconant pt-2">
+								<ul class="servlist mt-0">
+									{% for ups_sub_heading in usp_heading %}
+									<li><i class="fa fa-angle-double-right"></i> {{ups_sub_heading.sub_heading_name}}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Choose Section -->
+	{% for references_data in references %}
+	  <section class="whyUsSection pt-0" id="references">
+    	<div class="headingTitleBg">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-12">
+    					<div class="about-content">
+    						<h2>References</h2>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container-fluid p-0">
+    		<div class="row">
+    			<div class="col-lg-6 col-md-6">
+    				<div class="referencesImg">
+						<img src="{{references_data.image.url}}">
+					</div>
+					<div class="resourcesImgContant">
+						<div class="whiteBgColor">
+							<h3>{{references_data.resources_heading_name}}</h3>
+							<p>{{references_data.resources_description}}</p>
+						</div>
+					</div>
+    			</div>
+    			<div class="col-lg-6 col-md-6">
+    				<div class="profileCont">
+    					<div class="managingPartner">
+    						<h4>{{references_data.user_name}}</h4>
+    						<p>{{references_data.user_designation}}</p>
+    					</div>
+    					<div class="managingImg">
+    						<img src="{{references_data.user_image.url}}">
+    					</div>
+    				</div>
+    				<p class="comments"><i>"{{references_data.user_description}}"</i></p>
+    				<div class="joeFerrara">
+    					<p>{{references_data.user_about_us|linebreaks}}</p>
+    					
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+      </section>
+	{% endfor %}
+	<!-- Start Partner Logo Section -->
+    <div class="partner-area section-padding">
+        <div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h5 class="small-title">From Small Business to International</h5>
+						<h2>Management Projects Overview </h2>
+					</div>
+				</div>
+			</div>
+            <div id="partner-carousel" class="partner-carousel owl-carousel owl-theme owl-loaded main-timeline">
+	                <div class="partner-item">
+	                    <div class="timeline">
+	                        <a href="#!" class="timeline-content">
+	                        	<div class="topContant">
+		                            <div class="timeline-icon flagOne">
+		                            	<div class="topflagImg">
+		                                </div>
+		                            	<div class="topflagImg">
+		                                    <img src="{{1995_1999.image_first.url}}">
+		                                </div>
+		                                <div class="topPeragraph">
+			                                <p>{{1995_1999.description_first}}</p>
+			                            </div>
+		                            </div>
+		                        </div>
+	                            <div class="timeline-year">
+	                                <span>{{1995_1999.year_durations}}</span>
+	                            </div>
+	                            <div class="bottomContant">
+		                            <div class="timeline-icon">
+		                                <img src="{{1995_1999.image_second.url}}">
+		                            </div>
+		                            <div class="peragraphText">
+		                            	<p>{{1995_1999.description_second}}</p>
+		                            </div>
+		                            <div class="timeline-icon">
+		                                <img src="{{1995_1999.image_third.url}}">
+		                            </div>
+		                        </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                 <div class="partner-item">
+	                    <div class="timeline">
+	                        <a href="#!" class="timeline-content">
+	                        	<div class="bottomContant">
+		                            <div class="timeline-icon">
+		                                <img src="{{2000_2005.image_first.url}}">
+		                            </div>
+		                            <div class="peragraphText pt-0">
+		                            	<p>{{2000_2005.description_first}}</p>
+		                            	
+		                            </div>
+		                            <div class="timeline-icon">
+		                                <img src="{{2000_2005.image_second.url}}">
+		                            </div>
+		                        </div>
+	                            <div class="timeline-year">
+	                                <span>{{2000_2005.year_durations}}</span>
+	                            </div>
+	                            <div class="topContant">
+		                            <div class="timeline-icon flagOne">
+		                            	<div class="topflagImg peraStyle">
+		                            		<p>{{2000_2005.description_third}}</p>
+		                            		
+		                                </div>
+		                            	<div class="topflagImg">
+		                                    <img src="{{2000_2005.image_fourth.url}}">
+		                                </div>
+		                                <div class="topPeragraph peraStyle">
+			                                <p>{{2000_2005.description_fourth}}</p>
+			                            </div>
+		                            </div>
+		                        </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                <div class="partner-item">
+	                    <div class="timeline">
+	                        <a href="#!" class="timeline-content">
+	                        	<div class="topContant">
+		                            <div class="timeline-icon flagOne">
+		                            	<div class="topflagImg peraStyle pt-0">
+		                            		<p>{{2006_2010.description_first}}</p>
+		                            		
+		                                </div>
+		                            	<div class="topflagImg">
+		                                    <img src="{{2006_2010.image_second.url}}">
+		                                </div>
+		                                <div class="topPeragraph">
+			                                <p>{{2006_2010.description_second}}</p>
+			                                
+			                            </div>
+		                            </div>
+		                        </div>
+	                            <div class="timeline-year">
+	                                <span>{{2006_2010.year_durations}}</span>
+	                            </div>
+	                            <div class="bottomContant">
+		                            <div class="timeline-icon">
+		                                <img src="{{2006_2010.image_third.url}}">
+		                            </div>
+		                            <div class="peragraphText pt-5">
+		                            	<p>{{2006_2010.description_third}}</p>
+		                            	
+		                            </div>
+		                            <!-- <div class="timeline-icon">
+		                                <img src="images/bot-flg1.png">
+		                            </div> -->
+		                        </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                <div class="partner-item">
+	                    <div class="timeline">
+	                        <a href="#!" class="timeline-content">
+	                        	<div class="topContant">
+		                            <div class="timeline-icon flagOne">
+		                            	<div class="topflagImg peraStyle pt-0">
+		                            		<p>{{2011_2014.description_first}}</p>
+		                                </div>
+		                            	<div class="topflagImg">
+		                                    <img src="{{2011_2014.image_second.url}}">
+		                                </div>
+		                                <div class="topPeragraph">
+			                                <p>{{2011_2014.description_second}}</p>
+			                            </div>
+		                            </div>
+		                        </div>
+	                            <div class="timeline-year">
+	                                <span>{{2011_2014.year_durations}}</span>
+	                            </div>
+	                            <div class="bottomContant">
+		                            <div class="timeline-icon">
+		                                <img src="{{2011_2014.image_third.url}}">
+		                            </div>
+		                            <div class="peragraphText">
+		                            	<p>{{2011_2014.description_third}}</p>
+		                            </div>
+		                            <div class="timeline-icon">
+		                                <img src="{{2011_2014.image_fourth.url}}">
+		                            </div>
+		                        </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                <div class="partner-item">
+	                    <div class="timeline">
+	                        <a href="#!" class="timeline-content">
+	                        	<div class="topContant">
+		                            <div class="timeline-icon flagOne">
+		                            	
+		                            	<div class="topflagImg">
+		                                    <img src="{{2015_2019.image_first.url}}">
+		                                </div>
+		                                <div class="topPeragraph">
+			                                <p>{{2015_2019.description_first}}</p>
+			                            </div>
+		                            </div>
+		                        </div>
+	                            <div class="timeline-year">
+	                                <span>{{2015_2019.year_durations}}</span>
+	                            </div>
+	                            <div class="bottomContant">
+	                            	<div class="peragraphText">
+		                            	<p>{{2015_2019.description_third}}</p>
+		                            </div>
+		                            <div class="timeline-icon">
+		                                <img src="{{2015_2019.image_fourth}}">
+		                            </div>
+		                            <div class="peragraphText peraStyle">
+		                            	<p>{{2015_2019.description_fourth}} </p>
+		                            </div>
+		   
+		                        </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                <div class="partner-item">
+	                    <div class="timeline">
+	                        <a href="#!" class="timeline-content">
+
+	                        	<div class="bottomContant">
+		                            <div class="timeline-icon dubleflg">
+		                                <img src="{{2020_2022.image_first.url}}">
+		                            </div>
+		                            <div class="peragraphText peraStyle pt-0">
+		                            	<p>{{2020_2022.description_first|linebreaks}}</p>
+		                           
+		                            </div>
+		                            <div class="timeline-icon fourflg">
+		                                <img src="{{2020_2022.image_second.url}}">
+		                            </div>
+		                        </div>
+	                            <div class="timeline-year">
+	                                <span>{{2020_2022.year_durations}}</span>
+	                            </div>
+	                            <div class="topContant">
+		                            <div class="timeline-icon flagOne">
+		                            	<div class="topflagImg">
+		                                </div>
+		                            	<div class="topflagImg bottomdubleflg">
+		                                    <img src="{{2020_2022.image_fourth.url}}">
+		                                </div>
+		                                <div class="topPeragraph peraStyle">
+		                                	<p>{{2020_2022.description_fourth}}</p>
+
+			                            </div>
+		                            </div>
+		                        </div>
+	                        </a>
+	                    </div>
+	                </div> 
+	            </div>
+	        </div>
+        </div>
+    </div>
+	<!-- End Partner Logo Section -->
+	
+	
+	<!-- Start Contact Section -->
+	<section id="contactform" class="contact-area pb-0 pt-5">
+		<div class="container-lg container-fluid-md">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="section-title">
+						<h5 class="small-title">Get In Touch</h5>
+						<h2>Contact us</h2>
+						
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				{% for company in company_address %}
+				<div class="col-lg-4 col-md-12">
+					<div class="contact-info">
+						<ul>
+							<li class="wow fadeInLeft" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;">
+								<h6>{{company.IPBrandsGmbH}}</h6>
+								<p>{{company.address}}</p>
+							</li>
+							<li class="wow fadeInLeft" data-wow-duration="3s" style="visibility: visible; animation-duration: 3s; animation-name: fadeInLeft;">
+								<h6>{{company.GermanyOffice_title}}</h6>
+								<p>{{company.GermanyOfficeAddress}}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				{% endfor %}
+
+				<div class="col-lg-8 col-md-12">
+					<div class="wow fadeInUp" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
+					<p class="form-message"></p><br>
+					<form class="contact-form form" id="contact-form"  method="POST">
+						{% csrf_token %}
+						<div class="controls">
+							<div class="row">
+								<div class="col-lg-6 col-md-12">
+									<div class="form-group">
+										<input id="full_name" type="text" name="full_name"  placeholder="Your Name" required="required">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12">
+									<div class="form-group">
+										<input id="email" type="email" name="email"  placeholder="Your Email" required="required">
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12">
+									<div class="form-group">
+										<input id="subject" type="text" name="subject"  placeholder="Your Subject" required="required">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea id="message" name="message"  placeholder="Your Message" rows="4" required="required"></textarea>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<button type="submit" class="button">Send Message</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Section -->
+	
+	<!-- Start Footer Section -->
+	<section class="footer-area wow fadeInUp" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
+		<div class="footer-bottom-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="footer-content text-center">
+							<div class="footer-copyright-text">
+								<p>Copyright © 2022 <a href="www.ipremiumbrands.com">www.ipremiumbrands.com</a> All Rights Reserved </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		function serviceID(e){
+		
+			service_id = e
+			$.ajax({
+      type: "GET",
+      url: "",
+      data:{
+        service_id:service_id
+      },
+      success: function(data){
+      
+      }
+      
+    })
+		}
+	</script>
+	<!-- End Footer Section -->
+	
+	<!-- Start Back to Top -->
+	<div class="back-to-top">
+		<i class="fa fa-caret-up"></i><i class="fa fa-caret-up"></i>
+	</div>
+	<!-- End Back to Top -->
+	
+	<!-- Site All Jquery Js -->
+	<script src="{% static 'js/js-jquery-3.5.1.min.js' %}"></script>
+	<script src="{% static 'js/js-bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/js-plugins.js' %}"></script>
+	<script src="{% static 'js/js-jquery.mb.YTPlayer.min.js' %}"></script>
+	<script src="{% static 'js/js-swiper.min.js' %}"></script>
+	<script src="{% static 'js/js-wow.min.js' %}"></script>
+	<!-- Site Main Custom Js -->
+	<script src="{% static 'js/js-main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{% extends 'dashboard/index.html' %}
+{% load static %}
+<title>{% block title %} Edit  Services Sub Heading {% endblock title %} </title>
+{% block content %}
+
+<div class="col-md-6 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Edit Service Sub Heading: </h4>
+      <hr>
+      <form class="forms-sample" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="banner_image">Service Sub Heading:</label>
+          <input type="text" class="form-control"  value="{{data.sub_heading_name}}" id="sub_heading" name="sub_heading">
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary mr-2">Edit  </button>
+          </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+<div>
+    <h5>Show Services Sub Heading Recoard Lists:</h5>  
+    <div>
+        <a href="{% url 'ServiceSubHeadingLists' data.id %}">Show Lists</a>
+    </div>
+</div>
+{% endblock content %}

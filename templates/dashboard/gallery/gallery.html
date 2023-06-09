@@ -1,0 +1,86 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+  <title>{% block title %} Gallery Records {% endblock title %} </title>
+      {% block content %}
+
+<div class="col-lg-11 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <p class="card-description">
+                   
+                  </p>
+                  <h4 class="card-title">Gallery Record<a href="gallery-add-post" class="btn btn-success btn-sm" style="margin-left: 22px;">Add New</a>
+                  <div class="table-responsive">
+                  {% for message in messages %}
+                <b style="color:#03e9f4" >{{message}}</b>
+                {% endfor %} <br>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                            Image
+                          </th>
+                          <th>
+                            Title
+                          </th>
+                          <th>
+                            Description
+                          </th>
+                          <th>
+                            Post Date
+                          </th>
+                          <th>
+                            Last Update Date
+                          </th>
+                          <th>
+                            Action
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for all in all1 %}
+                        <tr>
+                          <td class="py-1">
+                          {% if all.image == "" %}
+                          No Image
+                          {% else %}
+                            <a href="{{all.image.url}}"><img src="{{all.image.url}}" alt="image"/></a>
+
+                            {% endif %}
+                          </td>
+                          <td>
+                            {{all.post_title}}
+                          </td>
+                       <td>
+                            {{all.description}}
+                          </td>
+                          <td>
+                            {{all.post_date}}
+                          </td>
+                          {% if all.last_update_date == None %}
+                          <td>
+                            Not Update
+                          </td>
+                          {% else %}
+                          <td>
+                            {{all.last_update_date}}
+                          </td>
+                          {% endif %}
+
+                          <td>
+                            <a href="edit-gallery/{{all.id}}" class="btn btn-outline-success btn-sm">Edit</a>
+                            <a href="delete-gallery/{{all.id}}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are You Sure')">Delete</a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+ {% endblock content %}
+
